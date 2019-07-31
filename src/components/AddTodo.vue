@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import uuid from "uuid";
+// import uuid from "uuid";
 
 export default {
 	name: "AddTodo",
@@ -16,11 +16,11 @@ export default {
 		addTodo(event) {
 			event.preventDefault();
 			const newTodo = {
-				id: uuid.v4(),
+				// id: uuid.v4(), // JSON placeholder generates us an ID like a database would
 				title: this.title,
 				completed: false
 			};
-			//Send up to parent by emitting an event
+			// Send up to parent by emitting an event
 			this.$emit("add-todo", newTodo);
 
 			this.title = "";
@@ -46,5 +46,3 @@ input[type="submit"] {
 	flex: 2;
 }
 </style>
-
-
